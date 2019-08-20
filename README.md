@@ -5,7 +5,7 @@ Celery rabbitmq testing
 git clone https://github.com/daedalus/test_celery
 
 #### In a separate terminal
-python3 /usr/local/bin/celery -A celery worker --loglevel=info
+python3 /usr/local/bin/celery -A test_celery worker --loglevel=info
 
 #### In another terminal
 
