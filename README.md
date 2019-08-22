@@ -10,3 +10,6 @@ python3 /usr/local/bin/celery -A test_celery worker --loglevel=info
 #### In another terminal
 
 python3 -m test_celery.run_tasks
+
+#### Again 
+ python3 /usr/local/bin/celery flower -A test_celery
