@@ -6,7 +6,10 @@ PASSWD=rb_passwd
 VHOST=rb_vhost
 TAG=rb_user_tag
 
-apt-get install rabbitmq-server
+sudo pip3 install flower
+sudo pip3 install celery
+
+sudo apt-get install rabbitmq-server -y
 
 rabbitmqctl add_user $USER $PASSWD
 rabbitmqctl add_vhost $VHOST
