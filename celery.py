@@ -14,7 +14,7 @@ USER='rb_user'
 PASSWD='rb_passwd'
 VHOST='rb_vhost'
 
-broker_url = ['pyamqp://%s:%s@localhost/%s' % (USER,PASSWD,VHOST)]
+broker_url = [f'pyamqp://{USER}:{PASSWD}@localhost/{VHOST}']
 
 app = Celery('test_celery',backend='amqp',broker=broker_url,include=['test_celery.tasks'])
 

@@ -32,27 +32,27 @@ def fibonacci(n):
 
 @app.task
 def find_primes(n):
-    print('>find_primes')
-    i = 2
-    while i * i < n:
-        while n % i == 0:
-            n = n / i
-        i = i + 1
-    print("<find_primes")
-    return n
+        print('>find_primes')
+        i = 2
+        while i**2 < n:
+                while n % i == 0:
+                    n = n / i
+                i += 1
+        print("<find_primes")
+        return n
 
 @app.task
 def prime_factors(n):
-    print('>prime_factors')
-    i = 2
-    factors = []
-    while i * i <= n:
-        if n % i:
-            i += 1
-        else:
-            n //= i
-            factors.append(i)
-    if n > 1:
-        factors.append(n)
-    print('<prime_factors')
-    return factors
+        print('>prime_factors')
+        i = 2
+        factors = []
+        while i**2 <= n:
+                if n % i:
+                    i += 1
+                else:
+                    n //= i
+                    factors.append(i)
+        if n > 1:
+            factors.append(n)
+        print('<prime_factors')
+        return factors
